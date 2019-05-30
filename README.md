@@ -1,6 +1,6 @@
-#codeConventions
+# codeConventions
 
-**Standardized Coding Conventions in Java for Delta Information Technology**
+### **Standardized Coding Conventions in Java for Delta Information Technology**
 
 Updated coding conventions in Java for use by Delta's IT department built off of the existing code conventions document in order to standardize coding practices accross departments in an modern manner.
 
