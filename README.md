@@ -1,4 +1,4 @@
-# codeConventions
+# Java Code Conventions
 
 ### **Standardized Coding Conventions in Java for Delta Information Technology**
 
