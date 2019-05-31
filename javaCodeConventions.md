@@ -11,11 +11,13 @@ This guide is meant to serve as a standard for writing clean, readable code in a
 
 
 ## Table of Contents
-- [Source Files](https://github.com/KristenEBrown/codeConventions/master/javaCodeConventions.md#Source-Files)
-  - [Source File Basics](https://github.com/KristenEBrown/codeConventions/master/javaCodeConventions.md#Source-File-Basics)
+- [Source Files](https://github.com/KristenEBrown/codeConventions/master/javaCodeConventions.md#source-files)
+  - [Source File Basics](https://github.com/KristenEBrown/codeConventions/master/javaCodeConventions.md#source-file-basics)
 
 
 
 ## Source Files
+ibjkfdijokgfdikj
 #### Source File Basics
+sdfiuhjgfdkjgfd
 
