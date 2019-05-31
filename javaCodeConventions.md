@@ -23,7 +23,7 @@ This guide is meant to serve as a standard for writing clean, readable code in a
 
 ### Source File Basics
 Java source files should contain only one public class or interface.  Files may contain private classes and interfaces associated with the the top level class, however, the top level class should be the first class in the file.</br></br>
-Files should be no longer than 2000 lines if possible.</br></br>
+Files should be no longer than 2000 lines if possible.
 
 ### Source File Names
 The source file should be case sensitive and use capital letters to delimit words.  The file should be named after its top level class or interface, plus the *.java* extension. Package and subpackage names should be lowercase.
