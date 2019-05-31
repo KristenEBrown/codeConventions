@@ -3,7 +3,8 @@ TODO:
 - add contents
 - review and update conventions
   -references: </br><https://github.com/facebook/jcommon/wiki/Coding-Standards> , </br><https://github.com/twitter/commons/edit/master/src/java/com/twitter/common/styleguide.md>,</br>
-<https://google.github.io/styleguide/javaguide.html>,<https://www.oracle.com/technetwork/java/codeconventions-150003.pdf>
+<https://google.github.io/styleguide/javaguide.html>,<https://www.oracle.com/technetwork/java/codeconventions-150003.pdf>, </br>
+<https://www.oracle.com/technetwork/java/codeconventions-150003.pdf>
 
 # Java Code Conventions
 
@@ -13,15 +14,19 @@ This guide is meant to serve as a standard for writing clean, readable code in a
 ## Table of Contents
 - [Source Files](https://github.com/KristenEBrown/codeConventions/javaCodeConventions.md#source-files)
   - [Source File Basics](https://github.com/KristenEBrown/codeConventions/javaCodeConventions.md#source-file-basics)
+  - [Source File Names](https://github.com/KristenEBrown/codeConventions/javaCodeConventions.md#source-file-names)
   - [Source File Sections](https://github.com/KristenEBrown/codeConventions/javaCodeConventions.md#source-file-sections)
 
 
 
 ## Source Files
 
-#### Source File Basics
+### Source File Basics
 Java source files should contain only one public class or interface.  Files may contain private classes and interfaces associated with the the top level class, however, the top level class should be the first class in the file.</br></br>
-Files should not be longer than 2000 lines if possible.</br></br>
+Files should be no longer than 2000 lines if possible.</br></br>
+
+### Source File Names
+The source file should be case sensitive and use capital letters to delimit words.  The file should be named after its top level class or interface, plus the *.java* extension. Package and subpackage names should be lowercase.
 
 ### Source File Sections
 Your file should be well organized in sections separated by one space and ordered accordingly:
@@ -30,5 +35,7 @@ Your file should be well organized in sections separated by one space and ordere
 - Package statements
 - Import statements
 - Class and interface declarations
+
+##### Beginning Comments
 
 
