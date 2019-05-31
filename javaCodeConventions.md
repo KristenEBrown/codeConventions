@@ -1,5 +1,5 @@
 TODO:
-- add links to table of contents
+-fix links to table of contents
 - add contents
 - review and update conventions
   -references: </br><https://github.com/facebook/jcommon/wiki/Coding-Standards> , </br><https://github.com/twitter/commons/edit/master/src/java/com/twitter/common/styleguide.md>,</br>
@@ -13,11 +13,22 @@ This guide is meant to serve as a standard for writing clean, readable code in a
 ## Table of Contents
 - [Source Files](https://github.com/KristenEBrown/codeConventions/javaCodeConventions.md#source-files)
   - [Source File Basics](https://github.com/KristenEBrown/codeConventions/javaCodeConventions.md#source-file-basics)
+  - [Source File Sections](https://github.com/KristenEBrown/codeConventions/javaCodeConventions.md#source-file-sections)
 
 
 
 ## Source Files
-ibjkfdijokgfdikj
+
 #### Source File Basics
-sdfiuhjgfdkjgfd
+Java source files should contain only one public class or interface.  Files may contain private classes and interfaces associated with the the top level class, however, the top level class should be the first class in the file.</br></br>
+Files should not be longer than 2000 lines if possible.</br></br>
+
+### Source File Sections
+Your file should be well organized in sections separated by one space and ordered accordingly:
+- License or copyright information
+- Beginning comments
+- Package statements
+- Import statements
+- Class and interface declarations
+
 
