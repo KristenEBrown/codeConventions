@@ -39,16 +39,16 @@ Files should be no longer than 2000 lines if possible.
   - Import statements
   - Class and interface declarations
 
-##### Beginning Comments
+#### Beginning Comments
   Beggining comments should follow [javaDoc standards](https://www.oracle.com/technetwork/articles/javase/index-137868.html).
 It should list the version (using the @version tag), the programmer(s)(using the @author tag), the date(using the @since tag), the copyright(if present), and a brief description of the program.  
 
-##### Package Statements
+#### Package Statements
   Package statements do not follow the column limit, and therefore, should not be wrapped.
 
-##### Import Statements
+#### Import Statements
 
-##### Class and Interface Declarations
+#### Class and Interface Declarations
   Each top level class resides in its own source file and should be listed first, and their class memebers and initializers ordered in a logical manner.  Do not order by date added (ie. add new methods at the bottom ect.).</br>
   If a class has multiple constructors, list them sequentially by number of parameters.  If overriding a method, **always** use the @Override tag.
 
