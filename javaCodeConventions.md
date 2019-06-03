@@ -16,26 +16,40 @@ This guide is meant to serve as a standard for writing clean, readable code in a
   - [Source File Basics](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#source-file-basics)
   - [Source File Names](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#source-file-names)
   - [Source File Sections](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#source-file-sections)
+    - [Beginning Comments](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#beginning-comments)
+    - [Package Statements](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#package-statements)
+    - [Import Statements](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#import-statements)
+    - [Class and Interface Declarations](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#Class-and-Interface-Declarations)
    
 
 
 ## Source Files
 
 ### Source File Basics
-Java source files should contain only one public class or interface.  Files may contain private classes and interfaces associated with the the top level class, however, the top level class should be the first class in the file.</br></br>
+  Java source files should contain only one public class or interface.  Files may contain private classes and interfaces    associated with the the top level class, however, the top level class should be the first class in the file.</br></br>
 Files should be no longer than 2000 lines if possible.
 
 ### Source File Names
-The source file should be case sensitive and use capital letters to delimit words.  The file should be named after its top level class or interface, plus the *.java* extension. Package and subpackage names should be lowercase.
+  The source file should be case sensitive and use capital letters to delimit words.  The file should be named after its top level class or interface, plus the *.java* extension. Package and subpackage names should be lowercase.
 
 ### Source File Sections
-Your file should be well organized in sections separated by one space and ordered accordingly:
-- License or copyright information
-- Beginning comments
-- Package statements
-- Import statements
-- Class and interface declarations
+  Your file should be well organized in sections separated by one space and ordered accordingly:
+  - Beginning comments and license or copyright information
+  - Package statements
+  - Import statements
+  - Class and interface declarations
 
 ##### Beginning Comments
+  Beggining comments should follow [javaDoc standards](https://www.oracle.com/technetwork/articles/javase/index-137868.html).
+It should list the version (using the @version tag), the programmer(s)(using the @author tag), the date(using the @since tag), the copyright(if present), and a brief description of the program.  
+
+##### Package Statements
+  Package statements do not follow the column limit, and therefore, should not be wrapped.
+
+##### Import Statements
+
+##### Class and Interface Declarations
+  Each top level class resides in its own source file and should be listed first, and their class memebers and initializers ordered in a logical manner.  Do not order by date added (ie. add new methods at the bottom ect.).</br>
+  If a class has multiple constructors, list them sequentially by number of parameters.  If overriding a method, **always** use the @Override tag.
 
 
