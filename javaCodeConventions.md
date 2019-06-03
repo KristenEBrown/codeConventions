@@ -41,7 +41,7 @@ Common directory layouts will help other users find your project quickly and rel
   - Beginning comments and license or copyright information
   - Package statements
   - Import statements
-  - Class and interface declarations</br></br>
+  - Class and interface declarations</br>
 
 #### Beginning Comments
   Beggining comments should follow [javaDoc standards](https://www.oracle.com/technetwork/articles/javase/index-137868.html).
