@@ -47,6 +47,13 @@ It should list the version (using the @version tag), the programmer(s)(using the
   Package statements do not follow the column limit, and therefore, should not be wrapped.
 
 #### Import Statements
+  Import statements do not follow the column limit, and therefore, should not be wrapped.
+  Imports should be ordered:
+  1. Static imports in one block
+  2. Non-static imports in the next block
+  If there are both static and non-static imports, seperate the two blocks with a single blank line.  The imports in each block should be ordered in ASCII sort order.</br>
+  Static imports should not be used for static nested classes, and should only be imported with normal imports.</br>
+  Wildcard imports are not allowed.
 
 #### Class and Interface Declarations
   Each top level class resides in its own source file and should be listed first, and their class memebers and initializers ordered in a logical manner.  Do not order by date added (ie. add new methods at the bottom ect.).</br>
