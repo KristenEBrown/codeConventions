@@ -31,6 +31,10 @@ Files should be no longer than 2000 lines if possible.
 
 ### Source File Names
   The source file should be case sensitive and use capital letters to delimit words.  The file should be named after its top level class or interface, plus the *.java* extension. Package and subpackage names should be lowercase.
+  
+### Directory Layout
+Common directory layouts will help other users find your project quickly and reliably.  
+**TODO:FINISH THIS**
 
 ### Source File Sections
   Your file should be well organized in sections separated by one space and ordered accordingly:
@@ -41,7 +45,7 @@ Files should be no longer than 2000 lines if possible.
 
 #### Beginning Comments
   Beggining comments should follow [javaDoc standards](https://www.oracle.com/technetwork/articles/javase/index-137868.html).
-It should list the version (using the @version tag), the programmer(s)(using the @author tag), the date(using the @since tag), the copyright(if present), and a brief description of the program.  
+It should list the version (using the @version tag), the programmer(s)(using the @author tag), the date(using the @since tag), the copyright(if present), and a brief description of the program and its uses.  
 
 #### Package Statements
   Package statements do not follow the column limit, and therefore, should not be wrapped.
@@ -53,10 +57,18 @@ It should list the version (using the @version tag), the programmer(s)(using the
   2. Non-static imports in the next block
   If there are both static and non-static imports, seperate the two blocks with a single blank line.  The imports in each block should be ordered in ASCII sort order.</br>
   Static imports should not be used for static nested classes, and should only be imported with normal imports.</br>
-  Wildcard imports are not allowed.
+  Wildcard imports are not allowed.</br>
+  Import of *java.lang.** is not required.  '*' imports should be minimized, and all declared imports must be used.
 
 #### Class and Interface Declarations
-  Each top level class resides in its own source file and should be listed first, and their class memebers and initializers ordered in a logical manner.  Do not order by date added (ie. add new methods at the bottom ect.).</br>
+  Each top level class resides in its own source file and should be listed first. Their class members and initializers ordered in a logical manner.  Do not order by date added (ie. add new methods at the bottom ect.).</br>
+  Subclasses of 'Exception' should have a name ending with 'Exception'.
+  
+  
+  
+  
+  
+ </br>
   If a class has multiple constructors, list them sequentially by number of parameters.  If overriding a method, **always** use the @Override tag.
 
 
