@@ -116,6 +116,16 @@ It should list the version (using the @version tag), the programmer(s)(using the
  </br>
   If a class has multiple constructors, list them sequentially by number of parameters.  If overriding a method, **always** use the @Override tag.
 
+## Formatting
+### Indentation
+Indent with four spaces, not TABs.  </br> </br>
+### Wrapping
+Lines should not be longer than 80 characters. When a line does not fit under 80 characters, wrap it according to to these guidelines:
+- Break after a comma
+- Break before an operator
+- Prefer higher level breaks to lower level breaks
+- Align the new line with the beginning of the expression at the same level of the previous line </br>
+If these rules create squished code or creates confusing formatting, use 8 spaces instead.  Line wrapping is meant to create clear code, so readability is the priority. </br> </br>
 
 
 
