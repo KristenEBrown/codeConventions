@@ -26,7 +26,12 @@ This guide is meant to serve as a standard for writing clean, readable code in a
     - [Class and Interface Declarations](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#Class-and-Interface-Declarations)
 - [Packages](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#packages)  
   - [Package Structure](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#package-structure)
-- [Classes](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#classes)  
+- [Classes](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#classes)
+- [Formatting](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#formatting)
+  - [Indentation](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#indentation)
+  - [Line Breaks](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#line-breaks)
+  - [Wrapping](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#wrapping)
+  - [Braces](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#braces)
 
 
 ## Source Files
@@ -117,8 +122,13 @@ It should list the version (using the @version tag), the programmer(s)(using the
   If a class has multiple constructors, list them sequentially by number of parameters.  If overriding a method, **always** use the @Override tag.
 
 ## Formatting
+
 ### Indentation
-Indent with four spaces, not TABs.  </br> </br>
+Indent with four spaces, not TABs. TABs should be set at 8 spaces.   </br> </br>
+
+### Line Breaks
+
+
 ### Wrapping
 Lines should not be longer than 80 characters. When a line does not fit under 80 characters, wrap it according to to these guidelines:
 - Break after a comma
@@ -127,5 +137,8 @@ Lines should not be longer than 80 characters. When a line does not fit under 80
 - Align the new line with the beginning of the expression at the same level of the previous line </br>
 If these rules create squished code or creates confusing formatting, use 8 spaces instead.  Line wrapping is meant to create clear code, so readability is the priority. </br> </br>
 
-
+### Braces
+Braces should be used for loops and if statements, even where they are optional.</br>
+There should be no line break before the opening brace, and there should be a line break after the opening brace.  There should be a line break before the closing break, and there should be a line break after the closing brace *only if* the brace terminates a statement or body of a method, constructor, or named class.  There is no line break after the brace if an else or comma follows the brace. </br>
+An empty block may be closed on the same line it is opened (except when included in a multi-block statement), or it may follow the above rules.</br>
 
