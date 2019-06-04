@@ -24,7 +24,7 @@ This guide is meant to serve as a standard for writing clean, readable code in a
     - [Package Statements](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#package-statements)
     - [Import Statements](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#import-statements)
     - [Class and Interface Declarations](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#Class-and-Interface-Declarations)
-   
+- [Packages](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#packages)   
 
 
 ## Source Files
@@ -97,7 +97,14 @@ It should list the version (using the @version tag), the programmer(s)(using the
 #### Class and Interface Declarations
   Each top level class(of any visibility type) resides in its own source file and should be listed first. Their class members and initializers ordered in a logical manner.  Do not order by date added (ie. add new methods at the bottom ect.).</br>
   Subclasses of 'Exception' should have a name ending with 'Exception'.</br>
-  *TODO: Add something?? Idk talk to JT*
+  *TODO: Add something?? Idk talk to JT* </br> </br> </br>
+  
+## Packages
+  
+  Projects should be organized into packages using a standard package naming scheme.  Use the reversed domain name, followed by the project specific packages and should be in all lowercase letters.</br>
+  For example, if you would like to create an application *myApp* as a part of Delta's IT department, the package name would be: com.deltaairlines.it.myapp and a class myClass inside this application would be: com.deltaairlines.it.myapp.myClass.  This would be located in your directory as src/main/java/com/deltaairlines/it/myapp/myclass and would be compiled into target/classes/com/deltaairlines/it/myapp/myclass.  Remember, the root of the source directory is src/main/java and the package should fall under this root. 
+  
+  **TODO add visual example!** </br> </br> </br>
   
   
   
