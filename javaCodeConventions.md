@@ -26,6 +26,7 @@ This guide is meant to serve as a standard for writing clean, readable code in a
     - [Class and Interface Declarations](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#Class-and-Interface-Declarations)
 - [Packages](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#packages)  
   - [Package Structure](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#package-structure)
+- [Classes](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#classes)  
 
 
 ## Source Files
@@ -109,6 +110,7 @@ It should list the version (using the @version tag), the programmer(s)(using the
   **TODO add visual example!** </br> </br> </br>
   
   
+  ## Classes
   
   
  </br>
