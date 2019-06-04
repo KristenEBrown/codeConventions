@@ -15,6 +15,7 @@ This guide is meant to serve as a standard for writing clean, readable code in a
 - [Source Files](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#source-files)
   - [Source File Basics](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#source-file-basics)
   - [Source File Names](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#source-file-names)
+  - [Directory Layout](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#directory-layout)  
   - [Source File Sections](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#source-file-sections)
     - [Beginning Comments](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#beginning-comments)
     - [Package Statements](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#package-statements)
@@ -26,18 +27,39 @@ This guide is meant to serve as a standard for writing clean, readable code in a
 ## Source Files
 
 ### Source File Basics
-  Java source files should contain only one public class or interface.  Files may contain private classes and interfaces    associated with the the top level class, however, the top level class should be the first class in the file.
+  Java source files should contain only one public class or interface.  Files may contain inner classes and interfaces    associated with the the top level class, however, the top level class should be the first class in the file.
 Files should be no longer than 2000 lines if possible.</br></br>
 
 ### Source File Names
   The source file should be case sensitive and use capital letters to delimit words.  The file should be named after its top level class or interface, plus the *.java* extension. Package and subpackage names should be lowercase.</br></br>
   
 ### Directory Layout
-Common directory layouts will help other users find your project quickly and reliably.  
+Common directory layouts will help other users find your project quickly and reliably.</br>
+#### Source Directories
+ Files should be laid out in the following path format according to the Apache Maven Project Standard Directory Layout:
+
+ 
+|  Path               |   File Type                |
+| :----               |    :----                   |
+| src/main/java       | Source files               |
+| src/main/resources  | Resource filter files      |
+| src/main/filters    | Web application sources    |
+| src/test/java       | Test sources               |
+| src/test/resources  | Test resources             |
+| src/test/filters    | Test resource filter files |
+| src/it              | Integration Tests          |
+| src/assembly        | Assembly descriptor        |
+| src/site            | Site                       |
+| LICENSE.txt         | Project's license          |
+| NOTICE.txt          | Notices and attributions required by libraries that the project depends on |
+| README.txt          | Project's readme           | </br>
+
+ 
+ 
 **TODO:FINISH THIS**</br></br>
 
 ### Source File Sections
-  Your file should be well organized in sections separated by one space and ordered accordingly:
+  Files should be well organized in sections separated by one space and ordered accordingly:
   - Beginning comments and license or copyright information
   - Package statements
   - Import statements
@@ -61,8 +83,9 @@ It should list the version (using the @version tag), the programmer(s)(using the
   Import of *java.lang.** is not required.  '*' imports should be minimized, and all declared imports must be used.</br>
 
 #### Class and Interface Declarations
-  Each top level class resides in its own source file and should be listed first. Their class members and initializers ordered in a logical manner.  Do not order by date added (ie. add new methods at the bottom ect.).</br>
+  Each top level class(of any visibility type) resides in its own source file and should be listed first. Their class members and initializers ordered in a logical manner.  Do not order by date added (ie. add new methods at the bottom ect.).</br>
   Subclasses of 'Exception' should have a name ending with 'Exception'.</br>
+  *TODO: Add something?? Idk talk to JT*
   
   
   
@@ -70,5 +93,7 @@ It should list the version (using the @version tag), the programmer(s)(using the
   
  </br>
   If a class has multiple constructors, list them sequentially by number of parameters.  If overriding a method, **always** use the @Override tag.
+
+
 
 
