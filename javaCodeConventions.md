@@ -36,26 +36,35 @@ Files should be no longer than 2000 lines if possible.</br></br>
 ### Directory Layout
 Common directory layouts will help other users find your project quickly and reliably.</br>
 #### Source Directories
- Files should be laid out in the following path format according to the Apache Maven Project Standard Directory Layout:
+ The source files house all material for building the project. The source directory should contain a subdirectory for main (the main build artifact), test (unit tests for the build), and any other attributes associated with creating the build. Source files should be laid out in the following path format according to the Apache Maven Project Standard Directory Layout:
 
  
-|  Path               |   File Type                |
-| :----               |    :----                   |
-| src/main/java       | Source files               |
-| src/main/resources  | Resource filter files      |
-| src/main/filters    | Web application sources    |
-| src/test/java       | Test sources               |
-| src/test/resources  | Test resources             |
-| src/test/filters    | Test resource filter files |
-| src/it              | Integration Tests          |
-| src/assembly        | Assembly descriptor        |
-| src/site            | Site                       |
-| LICENSE.txt         | Project's license          |
-| NOTICE.txt          | Notices and attributions required by libraries that the project depends on |
-| README.txt          | Project's readme           | </br>
+|  Path               |   File Type                          |
+| :----               |    :----                             |
+| src/main/java       | Application/Library sources          |
+| src/main/resources  | Application/Library resources/configuration files                                                             |
+| src/main/filters    | Resource filter files(contains files that inject values into the resources folder during the build phase)     |
+| src/main/webapp     | Web application sources(contains resources like JavaScript, CSS, HTML files, view templates, and images)      |
+| src/test/java       | Test sources                         |
+| src/test/resources  | Test resources/configuration files   |
+| src/test/filters    | Test resource filter files(contains files that inject values into the resources folder during the test phase) |
+| src/it              | Integration Tests                    |
+| src/assembly        | Assembly descriptor                  |
+| src/site            | Site                                 |</br>
 
+#### Target Directories
+ The target files are created to specify a location to house all output of the build.  Target files should be labeled as target/xxxxx using the appropriate description for what will be housed in the file.  For example, for compiled .class files and resources from src/main/resources should be named target/classes.
  
+ #### Text Files
+ Certain text files can be included in the package structure in order to associate important information with the project.  *All projects must contain a README.txt* which contains a description for the project/build.  Examples of common text files are as follows:
  
+ |  File Name          |   Description                        |
+ | :----               |    :----                             |
+ | LICENSE.txt         | Project's license                    |
+ | NOTICE.txt          | Notices and attributions required by libraries the project depends on                                    |
+ | README.txt          | Project's readme                     | </br>
+
+
 **TODO:FINISH THIS**</br></br>
 
 ### Source File Sections
