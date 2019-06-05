@@ -128,6 +128,19 @@ Indent with four spaces, not TABs. TABs should be set at 8 spaces.   </br> </br>
 
 ### Line Breaks
 
+### Blank Lines
+Blank lines can improve readability, however, they should be used consistently with the following rules in order to keep uniform code:
+
+ |  Number of Lines   |   Location                                                      |
+ | :----              |    :----                                                        |
+ | Two                | Between class and interface definitions                         |
+ | Two                | Between sections of a source file                               |
+ | One                | Between methods                                                 |
+ | One                | Between the local variables in a method and its first statement |
+ | One                | Before a block or single-line comment                           |
+ | One                | Between logical sections inside a method to improve readbility  |
+ | One                | Between consecutive members or initializers of a class field, method, nested class, static initializer, or      instance initializer <ul><li>A blank line between two consecutive fields is optional and should used as needed to create logical groupings of fields</li></ul>| </br>
+
 
 ### Wrapping
 Lines should not be longer than 80 characters. When a line does not fit under 80 characters, wrap it according to to these guidelines:
