@@ -30,6 +30,8 @@ This guide is meant to serve as a standard for writing clean, readable code in a
 - [Formatting](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#formatting)
   - [Indentation](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#indentation)
   - [Line Breaks](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#line-breaks)
+  - [Blank Lines](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#blank-lines)
+  - [Blank Spaces](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#blank-spaces)
   - [Wrapping](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#wrapping)
   - [Braces](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#braces)
 
@@ -141,6 +143,29 @@ Blank lines can improve readability, however, they should be used consistently w
  | One                | Between logical sections inside a method to improve readbility  |
  | One                | Between consecutive members or initializers of a class field, method, nested class, static initializer, or      instance initializer <ul><li>A blank line between two consecutive fields is optional and should used as needed to create logical groupings of fields</li></ul>| </br>
 
+### Blank Spaces
+A single blank space should appear in the following places **only**:
+- Between a reserved word (such as `if`, `for`, `while`) and its open parentheses that follows on the same line
+  - *Note:* a blank space should not be used between a method name and its opening parenthesis
+- Between a reserved word (such as `else` or `catch`) and the closing curly brace immediately preceeding
+- Before any open curly brace **except** when used as follows:
+  - @SomeAnnotation({a, b})
+  - String[][] x = {{"foo"}}
+- After commas in argument lists
+- On both sides of binary operators, ternary operators, or any other 'operator-like' symbol (such as conjunctive ampersands, ors ( `|` ,  `||` ), colons in foreach statements, and arrows in lambda expressions) **except** for:
+  - colons in method references
+  - dot seperators (such as `Object.toString()`)
+  - unary operators (such as i++ or --i)
+- Following the closing parenthesis of casts
+- Between the type and variable of a declaration (such as `List<String> myList`) </br>
+
+A single blank space is *optional* in the following places:
+- On both sides of the double slash (`//`) that begins an end-of-line comment
+- Just inside both braces of an array initializer </br> </br>
+
+*Note:* These rules only address *interior* spaces, not additional spaces at the start of a line. </br>
+
+Trailing whitespace is forbidden</br> </br>
 
 ### Wrapping
 Lines should not be longer than 80 characters. When a line does not fit under 80 characters, wrap it according to to these guidelines:
