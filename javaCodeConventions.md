@@ -28,10 +28,10 @@ This guide is meant to serve as a standard for writing clean, readable code in a
   - [Package Structure](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#package-structure)
 - [Classes](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#classes)
 - [Formatting](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#formatting)
-  - [Indentation](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#indentation)
-  - [Line Breaks](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#line-breaks)
   - [Blank Lines](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#blank-lines)
   - [Blank Spaces](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#blank-spaces)
+  - [Indentation](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#indentation)
+  - [Line Breaks](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#line-breaks)
   - [Wrapping](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#wrapping)
   - [Braces](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#braces)
 
