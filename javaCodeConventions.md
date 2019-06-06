@@ -34,6 +34,7 @@ This guide is meant to serve as a standard for writing clean, readable code in a
   - [Line Breaks](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#line-breaks)
   - [Wrapping](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#wrapping)
   - [Braces](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#braces)
+  - [Parenthesis](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#parenthesis)
 
 
 ## Source Files
@@ -192,5 +193,8 @@ Code should follow the One True Brace Style ([1TBS](https://en.wikipedia.org/wik
 Braces should always be used for loops and if statements, even where they are optional.</br>
 There should be no line break before the opening brace, and there should be a line break after the opening brace.  There should be a line break before the closing breace, and there should be a line break after the closing brace *only if* the brace terminates a statement or body of a method, constructor, or named class.  There is no line break after the brace if an else or comma follows the brace. </br>
 An empty block may be closed on the same line it is opened (except when included in a multi-block statement), or it may follow the above rules.</br>
-**TODO: write this clearly and add more visuals!**
+**TODO: write this clearly and add more visuals!** </br> </br>
+
+### Parenthesis
+Grouping parenthesis should be used liberally, and there should be no assumption of order presedence.  Optional grouping parenthesis may be omitted **only** if there is no reasonable chance the code will be misinterpreted without them. </br> </br>
 
