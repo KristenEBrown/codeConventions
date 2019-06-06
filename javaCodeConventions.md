@@ -127,10 +127,6 @@ It should list the version (using the `@version` tag), the programmer(s)(using t
 
 ## Formatting
 
-### Indentation
-Indent with four spaces, not TABs. TABs should be set at 8 spaces.   </br> </br>
-
-### Line Breaks
 
 ### Blank Lines
 Blank lines can improve readability, however, they should be used consistently with the following rules in order to keep uniform code:
@@ -167,7 +163,21 @@ A single blank space is *optional* in the following places:
 
 *Note:* These rules only address *interior* spaces, not additional spaces at the start of a line. </br>
 
-Trailing whitespace is forbidden</br> </br>
+Trailing whitespace is forbidden, and can cause issues for those who use keyboard shortcuts.</br> </br>
+
+### Indentation
+Indent with four spaces, not TABs. TABs should be set at 8 spaces.   </br> </br>
+
+### Line Breaks
+Line breaks should be used wisely and thoughtfully. </br>
+In general, they should be used to:
+1. Wrap a line which exceeds the column limit using the rules outlined in the following section
+2. Logically seperate a thought in order to show hierarchy and seperation. 
+  -Line breaks should be used for clarity and conveying information about your code.  If a line break will add information to the viewer about the code where the break is used, it is appropriate to use a line break. </br>
+
+Use your best judgement when using line breaks, and when in doubt, default to less linebreaks.  </br> </br>
+
+**TODO: Add visuals**
 
 ### Wrapping
 Lines should not be longer than 80 characters. When a line does not fit under 80 characters, wrap it according to to these guidelines:
@@ -178,7 +188,8 @@ Lines should not be longer than 80 characters. When a line does not fit under 80
 If these rules create squished code or creates confusing formatting, use 8 spaces instead.  Line wrapping is meant to create clear code, so readability is the priority. </br> </br>
 
 ### Braces
-Braces should be used for loops and if statements, even where they are optional.</br>
+Code should follow the One True Brace Style ([1TBS] (https://en.wikipedia.org/wiki/Indentation_style)) as described in the rules which follow. </br>
+Braces should always be used for loops and if statements, even where they are optional.</br>
 There should be no line break before the opening brace, and there should be a line break after the opening brace.  There should be a line break before the closing breace, and there should be a line break after the closing brace *only if* the brace terminates a statement or body of a method, constructor, or named class.  There is no line break after the brace if an else or comma follows the brace. </br>
 An empty block may be closed on the same line it is opened (except when included in a multi-block statement), or it may follow the above rules.</br>
 **TODO: write this clearly and add more visuals!**
