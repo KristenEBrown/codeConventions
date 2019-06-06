@@ -213,8 +213,18 @@ All identifiers should only contain Ascii letters, digits, and, in a few cases, 
 See [Source File Names](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#source-file-names) and [Package Names](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#package-names). </br> </br>
 
 ### Class Names
-Class names are written in UpperCamelCase, and are typically nouns or noun phrases. They should be simple and discriptive.  Do not use acronyms or abbreviations, unless they are more commonly used than the complete word such as URL or HTML.
+Class names are written in UpperCamelCase, and are typically nouns or noun phrases. They should be simple and discriptive.  Do not use acronyms or abbreviations, unless they are more commonly used than the complete word such as URL or HTML. </br> </br>
+
+### Test Class Names
+Test classes are named starting with the name of the class they are testing and end with the word `Test`.  Otherwise, they follow the same rules as classes. </br> </br>
+
+### Interface Names
+Interfaces should follow the same rules as classes. </br> </br>
 
 ### Method Names
+Method names should be verbs or verb phrases in lowerCamelCase. </br> </br>
+
+### Variable Names
+
 ### Constant Names
 
