@@ -188,7 +188,7 @@ Lines should not be longer than 80 characters. When a line does not fit under 80
 If these rules create squished code or creates confusing formatting, use 8 spaces instead.  Line wrapping is meant to create clear code, so readability is the priority. </br> </br>
 
 ### Braces
-Code should follow the One True Brace Style ([1TBS] (https://en.wikipedia.org/wiki/Indentation_style)) as described in the rules which follow. </br>
+Code should follow the One True Brace Style ([1TBS](https://en.wikipedia.org/wiki/Indentation_style)) as described in the rules which follow. </br>
 Braces should always be used for loops and if statements, even where they are optional.</br>
 There should be no line break before the opening brace, and there should be a line break after the opening brace.  There should be a line break before the closing breace, and there should be a line break after the closing brace *only if* the brace terminates a statement or body of a method, constructor, or named class.  There is no line break after the brace if an else or comma follows the brace. </br>
 An empty block may be closed on the same line it is opened (except when included in a multi-block statement), or it may follow the above rules.</br>
