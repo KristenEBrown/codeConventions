@@ -26,6 +26,7 @@ This guide is meant to serve as a standard for writing clean, readable code in a
     - [Class and Interface Declarations](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#Class-and-Interface-Declarations)
 - [Packages](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#packages)  
   - [Package Structure](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#package-structure)
+  - [Package Names](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#package-names)
 - [Classes](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#classes)
 - [Formatting](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#formatting)
   - [Blank Lines](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#blank-lines)
@@ -35,6 +36,7 @@ This guide is meant to serve as a standard for writing clean, readable code in a
   - [Wrapping](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#wrapping)
   - [Braces](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#braces)
   - [Parenthesis](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#parenthesis)
+ - [Naming Conventions](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#naming-conventions)
 
 
 ## Source Files
@@ -48,6 +50,7 @@ Files should be no longer than 2000 lines if possible.</br></br>
   
 ### Directory Layout
 Common directory layouts will help other users find your project quickly and reliably.</br>
+
 #### Source Directories
  The source files house all material for building the project. The source directory should contain a subdirectory for main (the main build artifact), test (unit tests for the build), and any other attributes associated with creating the build. Source files should be laid out in the following path format according to the Apache Maven Project Standard Directory Layout:
 
@@ -113,12 +116,15 @@ It should list the version (using the `@version` tag), the programmer(s)(using t
   
   ### Package Structure
   Projects should be organized into packages using a standard package naming scheme.  Use the reversed domain name, followed by the project specific packages and should be in all lowercase letters.</br> </br>
-  For example, if you would like to create an application *`myApp`* as a part of Delta's IT department, the package name would be: `com.deltaairlines.it.myapp` and a class *`myClass`* inside this application would be: `com.deltaairlines.it.myapp.myClass`.</br>
+  For example, if you would like to create an application *`myApp`* as a part of Delta's IT department, the package name would be: `com.deltaairlines.it.myapp` and a class *`myClass`* inside this application would be: `com.deltaairlines.it.myapp.myclass`.</br>
   This would be located in your directory as `src/main/java/com/deltaairlines/it/myapp/myclass` and would compile into `target/classes/com/deltaairlines/it/myapp/myclass`.</br>
   Remember, the root of the source directory is `src/main/java` and the package should fall under this root. 
   
+  **Check capitalization??**
   **TODO add visual example!** </br> </br> </br>
   
+  ### Package Names
+  Package names should be all lowercase with seperate words concatinated together *without underscores*.
   
   ## Classes
   
@@ -187,6 +193,7 @@ Lines should not be longer than 80 characters. When a line does not fit under 80
 - Prefer higher level breaks to lower level breaks
 - Align the new line with the beginning of the expression at the same level of the previous line </br>
 If these rules create squished code or creates confusing formatting, use 8 spaces instead.  Line wrapping is meant to create clear code, so readability is the priority. </br> </br>
+**TODO:uhhhhh (google & fb)**
 
 ### Braces
 Code should follow the One True Brace Style ([1TBS](https://en.wikipedia.org/wiki/Indentation_style)) as described in the rules which follow. </br>
@@ -196,5 +203,18 @@ An empty block may be closed on the same line it is opened (except when included
 **TODO: write this clearly and add more visuals!** </br> </br>
 
 ### Parenthesis
-Grouping parenthesis should be used liberally, and there should be no assumption of order presedence.  Optional grouping parenthesis may be omitted **only** if there is no reasonable chance the code will be misinterpreted without them. </br> </br>
+Grouping parenthesis should be used liberally, and there should be no assumption of order presedence.  Optional grouping parenthesis may be omitted **only** if there is no reasonable chance the code will be misinterpreted without them. </br> </br> </br>
+
+## Naming Conventions
+Names should be clear and concise. A user should be able to understand what the variable is or does by the name.  </br>
+All identifiers should only contain Ascii letters, digits, and, in a few cases, underscores.  Single character or extremely short variable names are to be avoided, except as an indexer for loop iterations.
+
+### Source Files and Packages
+See [Source File Names](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#source-file-names) and [Package Names](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#package-names). </br> </br>
+
+### Class Names
+Class names are written in UpperCamelCase, and are typically nouns or noun phrases. They should be simple and discriptive.  Do not use acronyms or abbreviations, unless they are more commonly used than the complete word such as URL or HTML.
+
+### Method Names
+### Constant Names
 
