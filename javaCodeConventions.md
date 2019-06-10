@@ -51,6 +51,7 @@ This guide is meant to serve as a standard for writing clean, readable code in a
   - [Visibility Modifiers](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#visibility-modifiers)
   - [Interfaces](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#interfaces)
   - [Annotations](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#annotations)
+  - [This Keyword](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#this-keyword)
 
 ## Source Files
 
@@ -282,7 +283,27 @@ For example:
 Instead, *always* make getters and setters for accessing values in an alien object type, including in nested inner classes where java allow the container class to access private and protected feilds.  </br> </br>
 
 ### Interfaces
-Any class which is non-trivial to construct or performs non-trivial action should be an interface when possible, especially when future classes will be performing those actions as well. This allows for abstraction and future mutability as interfaces allow multiple classes to impliment the outlined behavior whereas classes only allow one direct subclass.  
+Any class which is non-trivial to construct or performs non-trivial action should be an interface when possible, especially when future classes will be performing those actions as well. This allows for abstraction and future mutability as interfaces allow multiple classes to impliment the outlined behavior whereas classes only allow one direct subclass.  </br> </br>
 
 ### Annotations
-  If a class has multiple constructors, list them sequentially by number of parameters.  If overriding a method, **always** use the `@Override` tag.
+  If a class has multiple constructors, list them sequentially by number of parameters.  If overriding a method, **always** use the `@Override` tag. </br> </br>
+ 
+ ### This Keyword
+ Only use `this.xxx` when accessing outside variable scopes.  </br>
+ For example: </br>
+  - This is the correct use of the `this` keyword (count is an instance field in the class which houses this method): </br>
+    `public setCount(int count) {` </br>
+        `this.count = count;` </br>
+    `}` </br>
+    
+  - The `this` keyword should not be used in this example:
+    `public setCount(int newCount) {` </br>
+        `count = newCount;` </br>
+    `}` </br> </br>
+    
+  
+  
+     
+ 
+ 
+ 
