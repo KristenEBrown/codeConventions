@@ -154,6 +154,7 @@ It should list the version (using the `@version` tag), the programmer(s)(using t
   8. `static` constructor methods
   9. `abstract` methods (only applicable for abstract classes)
   10. methods:
+  
     1. `public` instance methods
     2. `public static` methods
     3. `private` instance methods
