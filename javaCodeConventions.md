@@ -249,4 +249,4 @@ Parameters should be written in lowerCamelCase, and should not use one character
 ### Constant Names
 Constant variables (static final fields whos contents are immutible) should be ALL CAPS and words should be seperated by underscores. </br> 
 For example:
-- 'MIN_HEIGHT </br> </br> </br>
+- 'MIN_HEIGHT = 5` </br> </br> </br>
