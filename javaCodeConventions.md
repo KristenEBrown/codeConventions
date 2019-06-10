@@ -155,11 +155,10 @@ It should list the version (using the `@version` tag), the programmer(s)(using t
   8. `static` constructor methods
   9. `abstract` methods (only applicable for abstract classes)
   10. methods:
-  
-    1. `public` instance methods
-    2. `public static` methods
-    3. `private` instance methods
-    4. `private static` instance methods
+      1. `public` instance methods
+      2. `public static` methods
+      3. `private` instance methods
+      4. `private static` instance methods
   11. non-`public` inner classes
   12. non-`public static` inner classes
   13. `public` inner classes
