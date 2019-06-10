@@ -28,7 +28,8 @@ This guide is meant to serve as a standard for writing clean, readable code in a
   - [Package Structure](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#package-structure)
   - [Package Names](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#package-names)
 - [Classes](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#classes)
-  - [Class Structure](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#class-structure)  
+  - [Class Structure](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#class-structure) 
+  - [Overriding and Overloading](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#overriding-and-overloading)
 - [Formatting](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#formatting)
   - [Blank Lines](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#blank-lines)
   - [Blank Spaces](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#blank-spaces)
@@ -162,8 +163,12 @@ It should list the version (using the `@version` tag), the programmer(s)(using t
   11. non-`public` inner classes
   12. non-`public static` inner classes
   13. `public` inner classes
-  14. `public static` inner classes </br> </br> </br>
+  14. `public static` inner classes </br> </br>
   
+  ### Overriding and Overloading
+  If a class has multiple constructors, list them sequentially by number of parameters.  </br>
+  If overriding a method, **always** use the `@Override` tag. </br> </br> </br>
+
 
 ## Formatting
 
@@ -285,7 +290,16 @@ Instead, *always* make getters and setters for accessing values in an alien obje
 Any class which is non-trivial to construct or performs non-trivial action should be an interface when possible, especially when future classes will be performing those actions as well. This allows for abstraction and future mutability as interfaces allow multiple classes to impliment the outlined behavior whereas classes only allow one direct subclass.  </br> </br>
 
 ### Annotations
-  If a class has multiple constructors, list them sequentially by number of parameters.  If overriding a method, **always** use the `@Override` tag. </br> </br>
+  Annotations appear immediately after the documentation block, and listed on their own line with one annotation per line.
+  If overriding a method, **always** use the `@Override` tag, including for overriding a superclasses method. This will make the compiler help you out and avoid VERY hard to find bugs.</br>
+  The `@Override` tag may only be ommitted if the parent method is `@Deprecated`</br>
+  Use `@Nullable` when a variable, parameter, or method return may be `null`, even if it is private, however *try to use [`Optional`](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html) instead.* </br>
+  `@VisibleForTesting` is allowed for testing if you must, **BUT**, testing private methods may be an indication those methods belong in a different class or in a public interface.  Code that is hard to test indictes that improvements can be made to this code.
+  
+### Null
+  Object parameters to public constructors should always be checked against `null` unless `null` is allowed by the `@Nullable` tag. </br>
+  By default, disallow `null`, even if the field/method is private.
+  
  
  ### This Keyword
  Only use `this.xxx` when accessing outside variable scopes.  </br>
