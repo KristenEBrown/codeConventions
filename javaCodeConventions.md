@@ -28,6 +28,7 @@ This guide is meant to serve as a standard for writing clean, readable code in a
   - [Package Structure](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#package-structure)
   - [Package Names](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#package-names)
 - [Classes](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#classes)
+  - [Class Structure](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#class-structure)  
 - [Formatting](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#formatting)
   - [Blank Lines](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#blank-lines)
   - [Blank Spaces](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#blank-spaces)
@@ -46,7 +47,10 @@ This guide is meant to serve as a standard for writing clean, readable code in a
   - [Variable Names](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#variable-names)
   - [Parameter Names](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#parameter-names)
   - [Constant Names](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#constant-names)
-
+- [Programming Practices](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#programming-practices)
+  - [Visibility Modifiers](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#visibility-modifiers)
+  - [Interfaces](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#interfaces)
+  - [Annotations](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#annotations)
 
 ## Source Files
 
@@ -108,7 +112,7 @@ It should list the version (using the `@version` tag), the programmer(s)(using t
 
 #### Import Statements
   Import statements do not follow the column limit, and therefore, should not be wrapped.
-  Imports should be ordered:
+  Imports should be ordered by top-level package with blank lines separating blocks in the following order and manner:
   1. Static imports in one block
   2. Non-static imports in the next block
   If there are both static and non-static imports, seperate the two blocks with a single blank line.  The imports in each block should be ordered in ASCII sort order.</br>
@@ -130,16 +134,35 @@ It should list the version (using the `@version` tag), the programmer(s)(using t
   Remember, the root of the source directory is `src/main/java` and the package should fall under this root. 
   
   **Check capitalization??**
-  **TODO add visual example!** </br> </br> </br>
+  **TODO add visual example!** </br> </br>
   
   ### Package Names
-  Package names should be all lowercase with seperate words concatinated together *without underscores*.
+  Package names should be all lowercase with seperate words concatinated together *without underscores*. </br> </br> </br>
+
+## Classes
   
-  ## Classes
+  ### Class Structure
+  Classes should be structured for readibility and uniformity between objects.  This ordering should be followed as much as possible, however, if another structure or ordering is more logical and leads to easier readibility, opt for that.  Use your best judgement. </br>
+  Classes should be grouped in the following order with a blank line seperating each group:
+  1. `public static` variables
+  2. package private `static` variables
+  3. `private static` variables
+  4. `public` instance variables
+  5. package private instance variables
+  6. `private` instance variables
+  7. constructors
+  8. `static` constructor methods
+  9. `abstract` methods (only applicable for abstract classes)
+  10. methods:
+    1. `public` instance methods
+    2. `public static` methods
+    3. `private` instance methods
+    4. `private static` instance methods
+  11. non-`public` inner classes
+  12. non-`public static` inner classes
+  13. `public` inner classes
+  14. `public static` inner classes </br> </br> </br>
   
-  
- </br>
-  If a class has multiple constructors, list them sequentially by number of parameters.  If overriding a method, **always** use the `@Override` tag.
 
 ## Formatting
 
@@ -212,7 +235,7 @@ An empty block may be closed on the same line it is opened (except when included
 **TODO: write this clearly and add more visuals!** </br> </br>
 
 ### Parenthesis
-Grouping parenthesis should be used liberally, and there should be no assumption of order presedence.  Optional grouping parenthesis may be omitted **only** if there is no reasonable chance the code will be misinterpreted without them. </br> </br> </br>
+Grouping parenthesis should be used liberally, and there should be no assumption of order presedence.  Optional grouping parenthesis may be omitted **only** if there is no reasonable chance the code will be misinterpreted without them. </br> </br>
 
 ## Naming Conventions
 Names should be clear and concise. A user should be able to understand what the variable is or does by the name.  </br>
@@ -250,3 +273,15 @@ Parameters should be written in lowerCamelCase, and should not use one character
 Constant variables (static final fields whos contents are immutible) should be ALL CAPS and words should be seperated by underscores. </br> 
 For example:
 - `MIN_HEIGHT = 5` </br> </br> </br>
+
+## Programming Practices
+
+### Visibility Modifiers
+**DO NOT** make any instance or class public without good reason.  This can lead to security issues and give improper access to the user. </br> 
+Instead, *always* make getters and setters for accessing values in an alien object type, including in nested inner classes where java allow the container class to access private and protected feilds.  </br> </br>
+
+### Interfaces
+Any class which is non-trivial to construct or performs non-trivial action should be an interface when possible, especially when future classes will be performing those actions as well. This allows for abstraction and future mutability as interfaces allow multiple classes to impliment the outlined behavior whereas classes only allow one direct subclass.  
+
+### Annotations
+  If a class has multiple constructors, list them sequentially by number of parameters.  If overriding a method, **always** use the `@Override` tag.
