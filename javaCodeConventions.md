@@ -296,7 +296,7 @@ Any class which is non-trivial to construct or performs non-trivial action shoul
         `this.count = count;` </br>
     `}` </br>
     
-  - The `this` keyword should not be used in this example:
+  - The `this` keyword should not be used in this example: </br>
     `public setCount(int newCount) {` </br>
         `count = newCount;` </br>
     `}` </br> </br>
