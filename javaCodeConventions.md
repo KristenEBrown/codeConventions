@@ -36,7 +36,16 @@ This guide is meant to serve as a standard for writing clean, readable code in a
   - [Wrapping](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#wrapping)
   - [Braces](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#braces)
   - [Parenthesis](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#parenthesis)
- - [Naming Conventions](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#naming-conventions)
+- [Naming Conventions](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#naming-conventions)
+  - [Source File and Package Names](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#source-file-and-package-names)
+  - [Class Names](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#class-names)
+  - [Test Class Names](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#test-class-names)
+  - [Interface Names](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#interface-names)
+  - [Method Names](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#method-names)
+  - [Test Method Names](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#test-method-names)
+  - [Variable Names](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#variable-names)
+  - [Parameter Names](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#parameter-names)
+  - [Constant Names](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#constant-names)
 
 
 ## Source Files
@@ -209,7 +218,7 @@ Grouping parenthesis should be used liberally, and there should be no assumption
 Names should be clear and concise. A user should be able to understand what the variable is or does by the name.  </br>
 All identifiers should only contain Ascii letters, digits, and, in a few cases, underscores.  Single character or extremely short variable names are to be avoided, except as an indexer for loop iterations.
 
-### Source Files and Packages
+### Source File and Package Names
 See [Source File Names](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#source-file-names) and [Package Names](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#package-names). </br> </br>
 
 ### Class Names
@@ -224,7 +233,20 @@ Interfaces should follow the same rules as classes. </br> </br>
 ### Method Names
 Method names should be verbs or verb phrases in lowerCamelCase. </br> </br>
 
+### Test Method Names
+Test method names should use lowerCamelCase in each component, and each logical component should be seperated by underscores. </br>
+Typically, they should follow the pattern of `<methodUnderTest>_<state>`. </br>
+For example:
+- `push_emptyStack` </br> </br>
+
 ### Variable Names
+Variable names should be in lowerCamelCase and should be short and meaningful.  The name should be reflective of its use to the casual viewer.  </br>
+One letter variables should only be used for temporary "throwaway" variables such as those used in loops.  Commonly used temporary variables include `i`, `j`, `k`, `m`, and `n` for integers, and `c`, `d`, and `e` for characters. </br> </br>
+
+### Parameter Names
+Parameters should be written in lowerCamelCase, and should not use one character parameter names in public methods. </br> </br>
 
 ### Constant Names
-
+Constant variables (static final fields whos contents are immutible) should be ALL CAPS and words should be seperated by underscores. </br> 
+For example:
+- 'MIN_HEIGHT </br> </br> </br>
