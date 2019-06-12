@@ -53,6 +53,8 @@ This guide is meant to serve as a standard for writing clean, readable code in a
   - [Interfaces](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#interfaces)
   - [Annotations](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#annotations)
   - [This Keyword](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#this-keyword)
+  - [Accessing Static Variables and Methods](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#accessing-static-variables-and-methods)
+  - [Ternary Statements](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#ternary-statements)
 
 ## Source Files
 
@@ -276,7 +278,7 @@ One letter variables should only be used for temporary "throwaway" variables suc
 Parameters should be written in lowerCamelCase, and should not use one character parameter names in public methods. </br> </br>
 
 ### Constant Names
-Constant variables (static final fields whos contents are immutible) should be ALL CAPS and words should be seperated by underscores. </br> 
+Constant variables (static final fields whos contents are immutible) should be ALL CAPS and words should be seperated by underscores. </br>
 For example:
 - `MIN_HEIGHT = 5` </br> </br> </br>
 
@@ -298,25 +300,32 @@ Any class which is non-trivial to construct or performs non-trivial action shoul
   
 ### Null
   Object parameters to public constructors should always be checked against `null` unless `null` is allowed by the `@Nullable` tag. </br>
-  By default, disallow `null`, even if the field/method is private.
+  By default, disallow `null`, even if the field/method is private. </br> </br>
   
  
- ### This Keyword
- Only use `this.xxx` when accessing outside variable scopes.  </br>
- For example: </br>
-  - This is the correct use of the `this` keyword (count is an instance field in the class which houses this method): </br>
-    `public setCount(int count) {` </br>
-        `this.count = count;` </br>
-    `}` </br>
+### This Keyword
+Only use `this.xxx` when accessing outside variable scopes.  </br>
+For example: </br>
+- This is the correct use of the `this` keyword (count is an instance field in the class which houses this method): </br>
+  `public setCount(int count) {` </br>
+      `this.count = count;` </br>
+  `}` </br>
     
-  - The `this` keyword should not be used in this example: </br>
-    `public setCount(int newCount) {` </br>
-        `count = newCount;` </br>
-    `}` </br> </br>
+- The `this` keyword should not be used in this example: </br>
+  `public setCount(int newCount) {` </br>
+      `count = newCount;` </br>
+  `}` </br> </br>
     
-  
-  
-     
- 
- 
- 
+### Accessing Static Variables and Methods
+Do not access static variables or methods using an instance of the class.  Instead, use the class name. </br>
+For example:
+- `Dogs.packNum`  //Good
+- `Fido.packNum`  //Bad  </br>
+*where packNum is a static variable belonging to the Dogs class* </br> </br>
+
+### Ternary Statements
+Expressions before ? in ternary statements should be surrounded by parenthesis.
+For example:
+- `aBool ? aFunct() : bFunct()`  //Good
+- `(a < b) ? a : b`              //Good   
+- `a < b ? a : b`                //Bad
