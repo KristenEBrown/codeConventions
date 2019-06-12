@@ -108,6 +108,7 @@ Common directory layouts will help other users find your project quickly and rel
   - Class and interface declarations</br>
 
 #### Beginning Comments
+  **TODO: ask if we need author tag since code usually changes hands and were usign version control**
   Beggining comments should follow [javaDoc standards](https://www.oracle.com/technetwork/articles/javase/index-137868.html).
 It should list the version (using the `@version` tag), the programmer(s)(using the `@author` tag), the date(using the `@since` tag), the copyright(if present), and a brief description of the program and its uses.</br>
 
@@ -319,8 +320,9 @@ For example: </br>
 ### Accessing Static Variables and Methods
 Do not access static variables or methods using an instance of the class.  Instead, use the class name. </br>
 For example:
-- `Dogs.packNum`  //Good
-- `Fido.packNum`  //Bad  </br>
+- `Dogs.packNum`     //Good
+- `Fido.packNum`     //Bad  
+- `newDog().packNum` //Very Bad
 *where packNum is a static variable belonging to the Dogs class* </br> </br>
 
 ### Ternary Statements
@@ -329,3 +331,9 @@ For example:
 - `aBool ? aFunct() : bFunct()`  //Good
 - `(a < b) ? a : b`              //Good   
 - `a < b ? a : b`                //Bad
+
+### Caught Exceptions
+It is best practice to **always** handle a caught exception.  If it is truly appropriate to take no action inside a catch block, justify your reasoning inside a catch block. </br>
+In tests, if the caught exception is expected to be thrown, a commented is not needed as long as the error name starts with `expected.
+
+
