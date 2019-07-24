@@ -214,8 +214,6 @@ In general, they should be used to:
 
 Use your best judgement when using line breaks, and when in doubt, default to less linebreaks.  </br> </br>
 
-**TODO: Add visuals**
-
 ### Wrapping
 Lines should not be longer than 80 characters. When a line does not fit under 80 characters, wrap it according to to these guidelines:
 - Break after a comma
@@ -223,15 +221,42 @@ Lines should not be longer than 80 characters. When a line does not fit under 80
 - Prefer higher level breaks to lower level breaks
 - Align the new line with the beginning of the expression at the same level of the previous line </br>
 If these rules create squished code or creates confusing formatting, use 8 spaces instead.  Line wrapping is meant to create clear code, so readability is the priority. </br> </br>
-**TODO:uhhhhh (google & fb)**
 
 ### Braces
 Code should follow the One True Brace Style ([1TBS](https://en.wikipedia.org/wiki/Indentation_style)) as described in the rules which follow. </br>
 Braces should always be used for loops and if statements, even where they are optional.</br>
-There should be no line break before the opening brace, and there should be a line break after the opening brace.  There should be a line break before the closing breace, and there should be a line break after the closing brace *only if* the brace terminates a statement or body of a method, constructor, or named class.  There is no line break after the brace if an else or comma follows the brace. </br>
+There should be no line break before the opening brace, but there should be one after the opening brace.</br>  There should be a line break before the closing brace, and there should be a line break after the closing brace *only if* the brace terminates a statement or body of a method, constructor, or named class.  There is no line break after the brace if an else or comma follows the brace. </br>
 An empty block may be closed on the same line it is opened (except when included in a multi-block statement), or it may follow the above rules.</br>
-**TODO: write this clearly and add more visuals!** </br> </br>
-
+Examples of correct bracing:</br>
+```
+if (myBool) {
+  myColor = "blue";
+} else {
+  myColor = "green";
+}
+System.out.println(myColor);
+```      
+```
+if (myBool) {
+  myColor = "blue";
+}
+System.out.println(myColor);
+```
+```
+if (myBool) {}
+```
+```
+if (myBool) {
+}
+```  
+```
+if (myBool) {
+  myColor = "blue";
+} else {
+}
+```
+ *(Though the else block is unnecessary and should be ommitted in this case)* </br> </br>
+ 
 ### Parenthesis
 Grouping parenthesis should be used liberally, and there should be no assumption of order presedence.  Optional grouping parenthesis may be omitted **only** if there is no reasonable chance the code will be misinterpreted without them. </br> </br>
 
@@ -297,14 +322,18 @@ Any class which is non-trivial to construct or performs non-trivial action shoul
 Only use `this.xxx` when accessing outside variable scopes.  </br>
 For example: </br>
 - This is the correct use of the `this` keyword (count is an instance field in the class which houses this method): </br>
-  `public setCount(int count) {` </br>
-      `this.count = count;` </br>
-  `}` </br>
+  ```
+  public setCount(int count) {
+    this.count = count;
+  }
+  ```
     
 - The `this` keyword should not be used in this example: </br>
-  `public setCount(int newCount) {` </br>
-      `count = newCount;` </br>
-  `}` </br> </br>
+  ```
+  public setCount(int newCount) {
+    count = newCount;
+  }
+  ```
     
 ### Accessing Static Variables and Methods
 Do not access static variables or methods using an instance of the class.  Instead, use the class name. </br>
