@@ -91,8 +91,6 @@ Common directory layouts will help other users find your project quickly and rel
  | `README.txt`          | Project's readme                     | </br>
 
 
-**TODO:FINISH THIS**</br></br>
-
 ### Source File Sections
   Files should be well organized in sections separated by one space and ordered accordingly:
   - Beginning comments and license or copyright information
@@ -101,7 +99,6 @@ Common directory layouts will help other users find your project quickly and rel
   - Class and interface declarations</br>
 
 #### Beginning Comments
-  **TODO: ask if we need author tag since code usually changes hands and were usign version control**
   Beggining comments should follow [javaDoc standards](https://www.oracle.com/technetwork/articles/javase/index-137868.html).
 It should list the version (using the `@version` tag), the programmer(s)(using the `@author` tag), the date(using the `@since` tag), the copyright(if present), and a brief description of the program and its uses.</br>
 
@@ -121,7 +118,7 @@ It should list the version (using the `@version` tag), the programmer(s)(using t
 #### Class and Interface Declarations
   Each top level class(of any visibility type) resides in its own source file and should be listed first. Their class members and initializers ordered in a logical manner.  Do not order by date added (ie. add new methods at the bottom ect.).</br>
   Subclasses of '`Exception`' should have a name ending with '`Exception`'.</br>
-  *TODO: Add something?? Idk talk to JT* </br> </br> </br>
+  
   
 ## Packages
   
@@ -129,10 +126,9 @@ It should list the version (using the `@version` tag), the programmer(s)(using t
   Projects should be organized into packages using a standard package naming scheme.  Use the reversed domain name, followed by the project specific packages and should be in all lowercase letters.</br> </br>
   For example, if you would like to create an application *`myApp`* as a part of Delta's IT department, the package name would be: `com.deltaairlines.it.myapp` and a class *`myClass`* inside this application would be: `com.deltaairlines.it.myapp.myclass`.</br>
   This would be located in your directory as `src/main/java/com/deltaairlines/it/myapp/myclass` and would compile into `target/classes/com/deltaairlines/it/myapp/myclass`.</br>
-  Remember, the root of the source directory is `src/main/java` and the package should fall under this root. 
-  
-  **Check capitalization??**
-  **TODO add visual example!** </br> </br>
+  Remember, the root of the source directory is `src/main/java` and the package should fall under this root. </br> </br>
+  Another Example: </br>
+  ![Maven Tree1](https://i.stack.imgur.com/Cc9HB.png "Via Stack Overflow") </br> </br>
   
   ### Package Names
   Package names should be all lowercase with seperate words concatinated together *without underscores*. </br> </br> </br>
