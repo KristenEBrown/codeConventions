@@ -1,14 +1,6 @@
-**TODO:**</br>
--fix links to table of contents
-- add contents
-- review and update conventions
-  -references: **</br><https://github.com/facebook/jcommon/wiki/Coding-Standards> , </br><https://github.com/twitter/commons/edit/master/src/java/com/twitter/common/styleguide.md>,</br>
-<https://google.github.io/styleguide/javaguide.html>,<https://www.oracle.com/technetwork/java/codeconventions-150003.pdf>, </br>
-<https://www.oracle.com/technetwork/java/codeconventions-150003.pdf>
-
 # Java Code Conventions
 
-This guide is meant to serve as a standard for writing clean, readable code in an aim to be consistent between projects and increase longevity.  Most software will be maintained by people other than the original author throughout its lifecycle, so it is important to create your project in a manner others can understand quickly, easily, and thoroughly.  Following these guidelines will help to create sustainable and consistent software across authors.  While you should try to adhere to these guidelines, readability trumps these rules and you should use your best judgement.
+This guide is meant to serve as a standard for writing clean, readable code in an aim to be consistent between projects and increase longevity.  Most software will be maintained by people other than the original author throughout its lifecycle, so it is important to create your project in a manner others can understand quickly, easily, and thoroughly.  Following these guidelines will help to create sustainable and consistent software across authors.  While you should try to adhere to these guidelines, readability trumps these rules and you should use your best judgement.  This guide was made in while referencing [Oracle's Code Conventions](https://www.oracle.com/technetwork/java/codeconventions-150003.pdf), [Facebook's Coding Standards](https://github.com/facebook/jcommon/wiki/Coding-Standards), [Twitter's Coding Standards](https://github.com/twitter/commons/edit/master/src/java/com/twitter/common/styleguide.md), and [Google's Style Guide](https://google.github.io/styleguide/javaguide.html).
 
 
 ## Table of Contents
@@ -55,6 +47,7 @@ This guide is meant to serve as a standard for writing clean, readable code in a
   - [This Keyword](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#this-keyword)
   - [Accessing Static Variables and Methods](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#accessing-static-variables-and-methods)
   - [Ternary Statements](https://github.com/KristenEBrown/codeConventions/blob/master/javaCodeConventions.md#ternary-statements)
+
 
 ## Source Files
 
@@ -333,7 +326,7 @@ For example:
 - `a < b ? a : b`                //Bad
 
 ### Caught Exceptions
-It is best practice to **always** handle a caught exception.  If it is truly appropriate to take no action inside a catch block, justify your reasoning inside a catch block. </br>
+It is best practice to **always** handle a caught exception.  If it is truly appropriate to take no action inside a catch block, justify your reasoning inside that catch block. </br>
 In tests, if the caught exception is expected to be thrown, a commented is not needed as long as the error name starts with `expected.
 
 
